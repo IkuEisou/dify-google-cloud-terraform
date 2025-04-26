@@ -84,7 +84,7 @@ resource "google_sql_user" "dify_user" {
   name     = var.db_username
   instance = google_sql_database_instance.postgres_instance.name
   project  = var.project_id
-  password = var.db_password
+  password_wo = var.db_password
 
   depends_on = [google_sql_database_instance.postgres_instance]
 }
